@@ -2,11 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Instagram, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
-  const whatsappNumber = "5584999908241";
-  const whatsappMessage = encodeURIComponent(
-    "Olá! Gostaria de agendar uma sessão com a Psicóloga Aldenilza Freitas."
-  );
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappLink = "https://wa.me/5584999908241";
 
   return (
     <section id="contato" className="py-24">
