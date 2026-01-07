@@ -1,6 +1,13 @@
-import { CreditCard, Banknote, Smartphone, AlertCircle } from "lucide-react";
+import { CreditCard, Banknote, Smartphone, AlertCircle, ExternalLink } from "lucide-react";
+import { useState } from "react";
+import PixModal from "./PixModal";
 
 const InvestmentSection = () => {
+  const [pixModalOpen, setPixModalOpen] = useState(false);
+  
+  // Substitua pelo seu link de pagamento real (PagSeguro, Mercado Pago, etc.)
+  const cardPaymentLink = "https://wa.me/5584999908241?text=Olá! Gostaria de pagar com cartão de crédito.";
+
   return (
     <section id="investimento" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -62,20 +69,29 @@ const InvestmentSection = () => {
               Formas de Pagamento
             </h3>
             <div className="grid sm:grid-cols-3 gap-6">
-              <div className="flex items-center gap-3 justify-center">
-                <Smartphone className="w-5 h-5 text-primary" />
-                <span className="text-muted-foreground">Pix</span>
-              </div>
-              <div className="flex items-center gap-3 justify-center">
+              <button 
+                onClick={() => setPixModalOpen(true)}
+                className="flex items-center gap-3 justify-center p-4 rounded-xl bg-secondary/50 hover:bg-secondary transition-colors cursor-pointer group"
+              >
+                <Smartphone className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                <span className="text-foreground font-medium">Pix</span>
+              </button>
+              <div className="flex items-center gap-3 justify-center p-4 rounded-xl bg-secondary/30">
                 <Banknote className="w-5 h-5 text-primary" />
                 <span className="text-muted-foreground">Dinheiro</span>
               </div>
-              <div className="flex items-center gap-3 justify-center">
-                <CreditCard className="w-5 h-5 text-primary" />
-                <span className="text-muted-foreground">
+              <a 
+                href={cardPaymentLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 justify-center p-4 rounded-xl bg-secondary/50 hover:bg-secondary transition-colors cursor-pointer group"
+              >
+                <CreditCard className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                <span className="text-foreground font-medium">
                   Cartão de crédito*
                 </span>
-              </div>
+                <ExternalLink className="w-4 h-4 text-muted-foreground" />
+              </a>
             </div>
             <p className="text-xs text-muted-foreground text-center mt-4">
               *Com acréscimo
@@ -121,6 +137,8 @@ const InvestmentSection = () => {
           </div>
         </div>
       </div>
+      
+      <PixModal open={pixModalOpen} onOpenChange={setPixModalOpen} />
     </section>
   );
 };
