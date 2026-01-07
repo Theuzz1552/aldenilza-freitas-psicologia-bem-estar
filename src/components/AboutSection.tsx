@@ -1,4 +1,5 @@
 import { Shield, Lock, Heart } from "lucide-react";
+import aldenilzaFoto from "@/assets/aldenilza-foto.png";
 
 const AboutSection = () => {
   return (
@@ -17,20 +18,14 @@ const AboutSection = () => {
 
           {/* Content */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Image Placeholder */}
+            {/* Photo */}
             <div className="relative">
-              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center overflow-hidden">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Heart className="w-12 h-12 text-primary" />
-                  </div>
-                  <p className="text-sm text-muted-foreground font-medium">
-                    Aldenilza Freitas
-                  </p>
-                  <p className="text-xs text-muted-foreground">
-                    Psicóloga Clínica
-                  </p>
-                </div>
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src={aldenilzaFoto}
+                  alt="Aldenilza Freitas - Psicóloga Clínica"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               {/* Decorative Elements */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-xl" />
