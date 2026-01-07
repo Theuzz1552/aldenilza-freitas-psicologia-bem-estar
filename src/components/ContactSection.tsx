@@ -40,7 +40,7 @@ const ContactSection = () => {
             </a>
 
             <a
-              href="https://instagram.com/psicologa_aldenilzafreitas"
+              href="https://www.instagram.com/psicologa_aldenilzafreitas/"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-6 bg-card rounded-2xl border border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col items-center"
