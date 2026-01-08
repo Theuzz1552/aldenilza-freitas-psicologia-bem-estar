@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Instagram, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
-  const whatsappLink = "https://api.whatsapp.com/send/?phone=5584999908241&text&type=phone_number&app_absent=0";
+  const whatsappLink = "https://wa.me/5584999908241";
 
   return (
     <section id="contato" className="py-24">
