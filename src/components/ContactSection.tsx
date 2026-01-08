@@ -32,8 +32,8 @@ const ContactSection = () => {
               <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-green-200 transition-colors">
                 <Phone className="w-7 h-7 text-green-600" />
               </div>
-              <h3 className="font-semibold text-foreground mb-1">WhatsApp</h3>
-              <p className="text-muted-foreground">(84) 99990-8241</p>
+              <h3 className="font-semibold text-foreground">WhatsApp</h3>
+              <p className="text-muted-foreground text-sm">Clique para conversar</p>
             </a>
 
             <a
