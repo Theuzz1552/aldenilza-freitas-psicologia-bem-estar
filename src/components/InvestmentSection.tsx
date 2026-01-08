@@ -6,7 +6,7 @@ const InvestmentSection = () => {
   const [pixModalOpen, setPixModalOpen] = useState(false);
   
   // Substitua pelo seu link de pagamento real (PagSeguro, Mercado Pago, etc.)
-  const cardPaymentLink = "https://wa.me/5584999908241?text=Olá! Gostaria de pagar com cartão de crédito.";
+  const cardPaymentLink = "https://api.whatsapp.com/send/?phone=5584999908241&text=Olá! Gostaria de pagar com cartão de crédito.&type=phone_number&app_absent=0";
 
   return (
     <section id="investimento" className="py-24 bg-secondary/30">
