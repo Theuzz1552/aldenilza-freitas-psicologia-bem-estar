@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Instagram, MessageCircle } from "lucide-react";
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 const ContactSection = () => {
-  const whatsappLink = "https://wa.me/5584999908241";
+  const whatsappLink = buildWhatsAppLink({ phone: "5584999908241" });
 
   return (
     <section id="contato" className="py-24">
