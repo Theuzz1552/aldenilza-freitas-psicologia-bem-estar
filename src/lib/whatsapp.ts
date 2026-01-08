@@ -3,26 +3,13 @@ export type WhatsAppLinkOptions = {
   text?: string;
 };
 
-const isMobileDevice = () => {
-  if (typeof navigator === "undefined") return false;
-  return /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
-};
+const encodeMessage = (text?: string) => (text ? encodeURIComponent(text) : "");
 
 /**
- * Returns a WhatsApp link that avoids `api.whatsapp.com` (often blocked by extensions/policies).
- * - Mobile: wa.me
- * - Desktop: web.whatsapp.com
+ * WhatsApp deep link.
+ * We use `wa.me` because `api.whatsapp.com` is frequently blocked by browsers/extensions.
  */
 export const buildWhatsAppLink = ({ phone, text }: WhatsAppLinkOptions) => {
-  const message = text ? encodeURIComponent(text) : "";
-
-  if (isMobileDevice()) {
-    // wa.me supports text param
-    return message ? `https://wa.me/${phone}?text=${message}` : `https://wa.me/${phone}`;
-  }
-
-  // Desktop web client
-  return message
-    ? `https://web.whatsapp.com/send?phone=${phone}&text=${message}`
-    : `https://web.whatsapp.com/send?phone=${phone}`;
+  const message = encodeMessage(text);
+  return message ? `https://wa.me/${phone}?text=${message}` : `https://wa.me/${phone}`;
 };
