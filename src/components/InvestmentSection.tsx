@@ -67,12 +67,12 @@ const InvestmentSection = () => {
                 <span className="text-muted-foreground">Pix</span>
               </div>
               <div className="flex items-center gap-3 justify-center p-4 rounded-xl bg-secondary/30">
-                <Banknote className="w-5 h-5 text-primary" />
-                <span className="text-muted-foreground">Dinheiro</span>
-              </div>
-              <div className="flex items-center gap-3 justify-center p-4 rounded-xl bg-secondary/30">
                 <CreditCard className="w-5 h-5 text-primary" />
                 <span className="text-muted-foreground">Cartão de crédito*</span>
+              </div>
+              <div className="flex items-center gap-3 justify-center p-4 rounded-xl bg-secondary/30">
+                <Banknote className="w-5 h-5 text-primary" />
+                <span className="text-muted-foreground">Dinheiro</span>
               </div>
             </div>
             <p className="text-xs text-muted-foreground text-center mt-4">
