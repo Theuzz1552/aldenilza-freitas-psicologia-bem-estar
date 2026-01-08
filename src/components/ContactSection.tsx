@@ -2,7 +2,10 @@ import { Phone, Instagram } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 const ContactSection = () => {
-  const whatsappLink = buildWhatsAppLink({ phone: "5584999908241" });
+  const whatsappLink = buildWhatsAppLink({ 
+    phone: "5584999908241",
+    text: "Olá, Aldenilza! 😊\n\nEncontrei seu site e gostaria de mais informações sobre o atendimento psicológico.\n\nPoderia me explicar como funciona?"
+  });
 
   return (
     <section id="contato" className="py-24">
