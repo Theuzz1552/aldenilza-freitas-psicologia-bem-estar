@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Phone, Instagram, MessageCircle } from "lucide-react";
+import { Phone, Instagram } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 const ContactSection = () => {
@@ -22,7 +21,7 @@ const ContactSection = () => {
           </p>
 
           {/* Contact Cards */}
-          <div className="grid sm:grid-cols-2 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 gap-6">
             <a
               href={whatsappLink}
               target="_blank"
@@ -49,22 +48,6 @@ const ContactSection = () => {
               <p className="text-muted-foreground">@psicologa_aldenilzafreitas</p>
             </a>
           </div>
-
-          {/* CTA Button */}
-          <Button
-            variant="whatsapp"
-            asChild
-            className="group"
-          >
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MessageCircle className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-              Agendar pelo WhatsApp
-            </a>
-          </Button>
         </div>
       </div>
     </section>
