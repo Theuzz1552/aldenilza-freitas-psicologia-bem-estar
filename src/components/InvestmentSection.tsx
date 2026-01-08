@@ -97,21 +97,6 @@ const InvestmentSection = () => {
               *Com acréscimo
             </p>
 
-            {/* Pix Info */}
-            <div className="mt-8 p-4 bg-secondary/50 rounded-xl">
-              <p className="text-sm text-muted-foreground text-center">
-                <strong className="text-foreground">Pix (Telefone):</strong> 84
-                99990-8241
-              </p>
-              <p className="text-sm text-muted-foreground text-center mt-1">
-                <strong className="text-foreground">Banco:</strong> 0260 – Nu
-                Pagamentos S.A.
-              </p>
-              <p className="text-sm text-muted-foreground text-center mt-1">
-                <strong className="text-foreground">Titular:</strong> Antônia
-                Aldenilza Lopes de Freitas
-              </p>
-            </div>
           </div>
 
           {/* Important Notice */}
