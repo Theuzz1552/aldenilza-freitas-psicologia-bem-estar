@@ -43,18 +43,6 @@ const PixModal = ({ open, onOpenChange }: PixModalProps) => {
             </div>
           </div>
           
-          {/* Pix Info */}
-          <div className="text-center space-y-2">
-            <p className="text-sm text-muted-foreground">
-              <strong className="text-foreground">Chave Pix (Telefone):</strong> {pixKey}
-            </p>
-            <p className="text-sm text-muted-foreground">
-              <strong className="text-foreground">Banco:</strong> 0260 – Nu Pagamentos S.A.
-            </p>
-            <p className="text-sm text-muted-foreground">
-              <strong className="text-foreground">Titular:</strong> Antônia Aldenilza Lopes de Freitas
-            </p>
-          </div>
           
           {/* Copy Paste Section */}
           <div className="space-y-3">
